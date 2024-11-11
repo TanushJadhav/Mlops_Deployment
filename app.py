@@ -24,21 +24,21 @@ def predict():
         print(temp1, temp2, temp3, temp4, temp5, temp6)
 
         if sel_model == "gear_oil_temp":
-            model = load_model("LSTM Model/Gear oil temperature (°C).csv.h5")
+            model = load_model("./LSTM Model/Gear oil temperature .h5")
         elif sel_model == "gear_oil_inlet_temp":
-            model = load_model("LSTM Model/Gear oil inlet temperature (°C).csv.h5")
+            model = load_model("LSTM Model/Gear oil inlet temperature .h5")
         elif sel_model == "front_bearing_temp":
-            model = load_model("LSTM Model/Front bearing temperature (°C).csv.h5")
+            model = load_model("LSTM Model/Front bearing temperature .h5")
         elif sel_model == "rear_bearing_temp":
-            model = load_model("LSTM Model/Rear bearing temperature (°C).csv.h5")
+            model = load_model("LSTM Model/Rear bearing temperature .h5")
         elif sel_model == "gen_bearing_front_temp":
-            model = load_model("LSTM Model/Generator bearing front temperature (°C).csv.h5")
+            model = load_model("LSTM Model/Generator bearing front temperature .h5")
         elif sel_model == "gen_bearing_rear_temp":
-            model = load_model("LSTM Model/Generator bearing rear temperature (°C).csv.h5")
+            model = load_model("LSTM Model/Generator bearing rear temperature .h5")
         elif sel_model == "rotor_bearing_temp":
-            model = load_model("LSTM Model/Rotor bearing temp (°C).csv.h5")
+            model = load_model("LSTM Model/Rotor bearing temp .h5")
         else:
-            model = load_model("LSTM Model/Stator temperature 1 (°C).csv.h5")
+            model = load_model("LSTM Model/Stator temperature 1 .h5")
 
         # prediction = model.predict([[temp1, temp2, temp3, temp4, temp5, temp6]])[0,0]
         prediction = model.predict([[[temp1, temp2, temp3, temp4, temp5, temp6]]])[0,0]
