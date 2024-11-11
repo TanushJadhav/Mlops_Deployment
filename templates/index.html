@@ -245,7 +245,7 @@
             const temp6 = document.getElementById("temp6").value;
 
             // Send data to the Flask backend
-            fetch("/predict", {
+            fetch("https://thermoil-fpefhfaqeqakfgcc.centralindia-01.azurewebsites.net/predict", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
