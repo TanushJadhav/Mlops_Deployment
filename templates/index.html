@@ -262,6 +262,7 @@
             })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(result);
                     // Display prediction result below the form
                     const resultDiv = document.getElementById("result");
                     if (data.prediction !== undefined) {
